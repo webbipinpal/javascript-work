@@ -72,7 +72,7 @@ ul.Pagination, ul.Pagination li{ padding:0; margin:0; list-style:none; }
 ul.Pagination li{ margin-right:10px; display:inline-block; }
 ul.Pagination li:last-child{ margin-right:0;}
 ul.Pagination li a{font-size:16px; display:inline-block; font-weight:bold; border-radius:5px; color:#fff;background-color:#2184be; text-decoration:none; padding:8px 15px; text-align:center;}
-ul.Pagination li.disabled a{ background-color:#eee; color:#aaa; border:1px solid #ddd; cursor:default;}
+ul.Pagination li.disabled a{ background-color:#eee; color:#aaa; border:1px solid #ddd; cursor:default; display:none;}
 </style>
 </head>
 
@@ -94,9 +94,9 @@ ul.Pagination li.disabled a{ background-color:#eee; color:#aaa; border:1px solid
   </div>
   <div class="actions">
   <ul class="Pagination">
-    <li class="disabled" id="previous" onClick="prev()"><a href="#previous">Previous</a></li>
-    <li id="next"><a href="#next">Next</a></li>
-    <li class="disabled" id="finish"><a href="#finish">Finish</a></li>
+    <li class="disabled" id="prev"><a href="javascript:void(0)">Previous</a></li>
+    <li class="next" id="next"><a href="javascript:void(0)">Next</a></li>
+    <li class="disabled" id="finish"><a href="javascript:void(0)">Finish</a></li>
   </ul>
 </div>
 </div>
@@ -108,19 +108,21 @@ $(document).ready(function() {
 
 	$('ul.tabs li').on('click', function(){
 		var tab_id = $(this).attr('data-tab');
-		localStorage.setItem('tab', tab_id);
+		 localStorage.setItem('tab', tab_id);
 		$('ul.tabs li').removeClass('current');
 		$('.tab-content').removeClass('current');
-
+		
 		$(this).addClass('current');
 		$('#'+tab_id).addClass('current');
 	});
-
+	
 	$('.Pagination li').on('click', function(){
 		var button_id = $(this).attr('id');
-		if(button_id == 'next'){	
+		
+		if(button_id == 'next'){			
 			if ($('ul.tabs').find('li.current').next('li').size() > 0){
 				$('ul.tabs').find('li.current').addClass('prev').removeClass('current').next('li').addClass('current').prev('li').removeClass('prev');
+				$('#prev').removeClass('disabled');
 				var tab_data = $('ul.tabs').find('li.current').attr('data-tab');
 				$('.content').find('div.current').addClass('con_prev').removeClass('current').next('div').addClass('current').prev('div').removeClass('con_prev');
 			}else{
@@ -129,12 +131,21 @@ $(document).ready(function() {
 				$('#finish').click(function(){
 					window.location = 'file:///C:/Users/Bipin/Desktop/mix_html/mini-projects-exm/menu.html';
 				});
-			}	
+			}			
+		}else if(button_id == 'prev'){
+			if($('ul.tabs').find('li.current').prev('li').size() >0){
+				$('ul.tabs').find('li.current').addClass('prev').removeClass('current').prev('li').addClass('current').prev('li').removeClass('prev');
+				
+				var tab_data = $('ul.tabs').find('li.current').attr('data-tab');
+				$('.content').find('div.current').addClass('con_prev').removeClass('current').prev('div').addClass('current').prev('div').removeClass('con_prev');
+			
+			}
+		
 		}
-
-
+	 
+	
 	});
-
+	
 
 });
 
