@@ -53,14 +53,41 @@ body {
   <div id="title-4" class="accordion-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</div>
 </div>
 <script type="text/javascript">
+
+
 $(document).ready(function(){
-	$('.accordion-content').slideUp();
+
+	$('.accordion-content').slideUp();  // close all accordiaons
+	
 	$('.accordion-title').click(function(){
+	
+		
+		
+		
+		
+		
+		
+		
+		var a =  $(this).attr('class');
+		//if (a.indexOf("active") >= 0)alert(a.indexOf("active"));
+		if(a === "accordion-title active"){
+		
+		$(this).removeClass("active");
+		$(this).next('.accordion-content').slideUp();
+		
+		}else{
+		
 		$('.accordion-title').removeClass('active');
 		$('.accordion-content').slideUp();
+		
 		$(this).addClass('active');
 		$(this).next('.accordion-content').slideDown();
-	
+		
+		}
+		
+		
+		
+		
 	});
 	
 
