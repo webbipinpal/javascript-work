@@ -73,7 +73,30 @@ body {
 
 
 <script type="text/javascript">
-$(document).ready(function(){
+
+	$(document).ready(function(){
+		function myFunction(){
+			var input, filter, ul, li, a, i;
+			input = document.getElementByID('myInput');
+			filter = input.value.toUpperCase();
+			ul = document.getElementById('myUL');
+			li = ul.getElementsByTagName('li');
+			
+			for(i= 0; i<li.lenght; i++){
+			a = li[i].getElementsByTagName('a')[0];
+			if(a.innerHTML.toUppercase().IndexOf(filter) > -1){
+				li
+				
+			}
+			
+			}
+		
+		};
+		
+	
+	
+	});
+	
 </script>
 </body>
 </html>
