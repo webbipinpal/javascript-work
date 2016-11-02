@@ -4,6 +4,28 @@
 <title>Page Title</title>
 <script src="js/jquery-1.9.1.min.js"> </script>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+<script type="text/javascript">
+
+	function myFunction(){
+		var input, filter, ul, li, a, i;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		ul = document.getElementById("myUL");
+		li = ul.getElementsByTagName("li");
+		
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+				li[i].style.display = "";
+			}else{
+				li[i].style.display = "none";	
+			}			
+		}		
+	}
+	
+
+</script>
 <style type="text/css">
 body {
 	padding: 0;
@@ -71,32 +93,5 @@ body {
 </div>
 
 
-
-<script type="text/javascript">
-
-	$(document).ready(function(){
-		function myFunction(){
-			var input, filter, ul, li, a, i;
-			input = document.getElementByID('myInput');
-			filter = input.value.toUpperCase();
-			ul = document.getElementById('myUL');
-			li = ul.getElementsByTagName('li');
-			
-			for(i= 0; i<li.lenght; i++){
-			a = li[i].getElementsByTagName('a')[0];
-			if(a.innerHTML.toUppercase().IndexOf(filter) > -1){
-				li
-				
-			}
-			
-			}
-		
-		};
-		
-	
-	
-	});
-	
-</script>
 </body>
 </html>
