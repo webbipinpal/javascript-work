@@ -8,19 +8,18 @@ input{ padding:5px 8px; border:1px solid #ccc;}
 </style>
 </head>
 <body>
-<div class="wrapper">
-	<div ng-app="myCurrency" ng-controller="currencyCtrl">
-		<h3>Price {{price | currency}}</h3>
+<div class="wrapper">	
+	<div ng-app="myApp" ng-controller="getURL">
+		<p>The url of this page</p>
+		<h3>{{myURL}}</h3>
 	</div>
-
+	
 </div>
 <script>
-angular.module('myCurrency', []).controller('currencyCtrl', function($scope){
-	$scope.price='58';
-
-});
-
-
+	var app = angular.module('myApp', []);
+	app.controller('getURL', function($scope, $location){
+		$scope.myURL = $location.absUrl();
+	});
 </script>
 </body>
 <html>
