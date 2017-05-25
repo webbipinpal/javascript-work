@@ -52,7 +52,7 @@ $(document).ready(function(){
 			var tagid = $(this).attr("id");		
 			firsttagid = tagid;		
 			$(this).addClass( i + '-color');	
-			first = i;		
+			first = i;			
 		}else{
 			  if(first != null && second == null){		  
 			  var i = $(this).attr("class");
@@ -64,23 +64,23 @@ $(document).ready(function(){
 		  }
 
 		  if(first != null && second != null){		  
-		  if(first == second){
-		  setTimeout(
-			function(){    
-			  $('#' + firsttagid).removeClass(first+"-color").addClass('yellow');
-			  $("#"+secondtagid).removeClass(second+"-color").addClass('yellow');
-			  first=null;
-			  second=null;
-		}, 1000);  			
-		  } else{
-			   setTimeout(
-				function(){
-						$('#' + firsttagid).removeClass(first+"-color");
-						$("#"+secondtagid).removeClass(second+"-color");
-						first=null;
-						second=null;
-				  }, 1000); 		  		 
-			  }		  
+			  if(first == second){
+			  setTimeout(
+				function(){    
+				  $('#' + firsttagid).removeClass(first+"-color").addClass('yellow');
+				  $("#"+secondtagid).removeClass(second+"-color").addClass('yellow');
+				  first=null;
+				  second=null;
+				}, 1000);  			
+			  }else{
+				   setTimeout(
+					function(){
+							$('#' + firsttagid).removeClass(first+"-color");
+							$("#"+secondtagid).removeClass(second+"-color");
+							first = null;
+							second = null;
+					  }, 1000); 		  		 
+				  }		  
 		  }		
 	});
 })
