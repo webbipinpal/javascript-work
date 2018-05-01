@@ -1,0 +1,9 @@
+.left-side{width: 15%; float: left;}
+.right-side{ width: 85%; float: left;}
+.products__item{ margin-bottom:2.4rem; width:23%; margin-right:2%; float:left;}
+.products__item:last-child{ margin-right:0;}
+.products__item .products__item__details{ padding:0 10px 10px;}
+.products__item .products__item--img{ margin-bottom:1.2rem; }
+.products__item .products__item--img a{ display:inline-block; border: 1px solid #f1f1f1; padding: 4px; border-radius: 4px;}
+.products__item .item--title{ margin:0 0 0.6rem; padding:0; font-size:18px; line-height:1.5; text-align:center;}
+.products__item--img img{ border-radius:4px; width:100%;}
