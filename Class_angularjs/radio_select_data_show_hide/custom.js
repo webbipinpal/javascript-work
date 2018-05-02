@@ -1,3 +1,4 @@
+
 var app = angular.module('myapp', []);
 app.controller('Ctrl', function($scope){
 	$scope.showList = 'menu1';
@@ -6,3 +7,4 @@ app.controller('Ctrl', function($scope){
 		return showList === $scope.showList;
 	}
 });
+
