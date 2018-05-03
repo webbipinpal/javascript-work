@@ -3,10 +3,7 @@ var app = angular.module('myApp',[]);
 app.controller('mycontroller', function($scope){
 	
 	
-	$scope.showList = 'menu1';
-	$scope.isShown = function(showList){
-		return showList === $scope.showList;
-	}
+	
 	$scope.choice1 = function(value){	
 		$scope.v1=value;
 		
@@ -30,6 +27,10 @@ app.controller('mycontroller', function($scope){
 			
 		
 		return $scope.accordion = value;
+	}
+	$scope.showList = 'menu1';
+	$scope.isShown = function(showList){
+		return showList === $scope.showList;
 	}
 	
 		
