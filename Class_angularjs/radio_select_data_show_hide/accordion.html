@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="example.js"></script>
+	<link rel="stylesheet" href="style.css" />
+  </head>
+  <body ng-app="myApp">
+
+<div ng-init="accordion=1" ng-controller="mycontroller">
+<div class="left-side">
+	<h3 class="accordion" ng-class="{active:accordion==1}">
+		<a href ng-click="choice1(1)">Section 1</a>
+	</h3>
+	<div class="accordion-content" ng-show="accordion==1">
+	
+	<ul>
+		<li><input type="radio" ng-model="showList" value="menu1"> Item Menu1</li>
+		<li><input type="radio" ng-model="showList" value="menu2"> Item Menu2</li>
+		<li><input type="radio" ng-model="showList" value="menu3"> Item Menu3</li>
+	</ul>
+	
+	</div>
+	    
+	<h3 class="accordion" ng-class="{active:accordion==2}">
+		<a href ng-click="choice1(2)">Section 2</a>
+	</h3>
+	<div class="accordion-content" ng-show="accordion==2">
+	
+	<ul>
+		<li><input type="radio" ng-model="showList1" value="menu4"> Item Menu4</li>
+		<li><input type="radio" ng-model="showList1" value="menu5"> Item Menu5</li>
+		<li><input type="radio" ng-model="showList1" value="menu6"> Item Menu6</li>
+	</ul>
+	
+	</div>
+	    
+	<h3 class="accordion" ng-class="{active:accordion==3}">
+		<a href ng-click="choice1(3)">Section 3</a>
+	</h3>
+	<div class="accordion-content" ng-show="accordion==3">
+	<ul>
+		<li><input type="radio" ng-model="showList3" value="menu7"> Item Menu7</li>
+		<li><input type="radio" ng-model="showList3" value="menu8"> Item Menu8</li>
+		<li><input type="radio" ng-model="showList3" value="menu9"> Item Menu9</li>
+	</ul>	
+	</div>
+</div>	
+	
+<div class="right-side">
+	<div ng-show="isShown('menu1')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User1-1</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah1.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User1-2</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah2.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User1-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah3.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User1-4</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah4.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User1-5</h6>
+		  </div>
+		</div>
+		
+		
+	</div>
+	<div ng-show="isShown('menu2')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah5.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User2-1</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah6.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User2-2</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah7.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User2-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah8.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User2-4</h6>
+		  </div>
+		</div>
+		
+	</div>
+	<div ng-show="isShown('menu3')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah9.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User3-1</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah10.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User3-2</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah11.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User3-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah12.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User3-4</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah13.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User3-5</h6>
+		  </div>
+		</div>
+		
+
+	</div>
+	<div ng-show="isShown('menu4')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah12.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User4-1</h6>
+		  </div>
+		</div>
+		
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah13.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User4-4</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah8.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User4-5</h6>
+		  </div>
+		</div>
+	</div>
+	<div ng-show="isShown('menu5')">
+		
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah7.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User5-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah2.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User5-4</h6>
+		  </div>
+		</div>
+	</div>
+	<div ng-show="isShown('menu6')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah5.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User6-1</h6>
+		  </div>
+		</div>
+		
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah12.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User6-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah13.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User6-4</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah10.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User6-5</h6>
+		  </div>
+		</div>
+
+	</div>
+	<div ng-show="isShown('menu7')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah9.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User7</h6>
+		  </div>
+		</div>
+
+	</div>
+	<div ng-show="isShown('menu8')">
+		
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah8.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User8-2</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah11.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User8-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah12.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User8-4</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah3.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User8-5</h6>
+		  </div>
+		</div>
+
+	</div>
+	<div ng-show="isShown('menu9')">
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah2.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User9-1</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah13.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User9-2</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah6.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User9-3</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah9.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User9-4</h6>
+		  </div>
+		</div>
+		<div class="products__item">
+		  <div class="products__item--img"> <a href="#"> <img src="image/baah13.jpg"> </a> </div>
+		  <div class="products__item__details">
+			<h6 class="item--title">User9-5</h6>
+		  </div>
+		</div>
+
+	</div>
+</div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="example.js"></script>
+	<style type="text/css">
+	*{
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 140%;
+}
+h3.accordion{
+    margin: 0;
+}
+.accordion a{
+    padding: 10px;
+    background: #ddd;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1px;
+}
+.accordion-content{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 1px 0;
+}	
+	</style>
+  </head>
+  <body ng-app="myApp">
+
+<div ng-init="accordion=1" ng-controller="mycontroller">
+	<h1>YOur choice: {{v1}}</h1>
+	<h3 class="accordion" ng-class="{active:accordion==1}">
+		<a href ng-click="choice1(1)">Section 1</a>
+	</h3>
+	<p class="accordion-content" ng-show="accordion==1">Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+	    
+	<h3 class="accordion" ng-class="{active:accordion==2}">
+		<a href ng-click="choice1(2)">Section 2</a>
+	</h3>
+	<p class="accordion-content" ng-show="accordion==2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+	    
+	<h3 class="accordion" ng-class="{active:accordion==3}">
+		<a href ng-click="choice1(3)">Section 3</a>
+	</h3>
+	<p class="accordion-content" ng-show=" ==3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+</div>
+  </body>
+</html>
