@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="appmodule" ng-controller="cartController">
+    <ul id="c"> <li ng-repeat ="cart in colleges">{{cart.title}} </li> </ul>
+    
+     <div> Totla Count: {{count}}</div>
+  vldfmgod;fgpoxf
+<script>
+  var  app = angular.module("appmodule", []);
+  app.controller("cartController", function($scope , $timeout){
+
+$scope.colleges = [{"nid":"256","title":"College of Islamic Studies"},{"nid":"239","title":"College of Humanities & Social Sciences"},{"nid":"235","title":"College of Science & Engineering"},{"nid":"257","title":"College of Law & Public Policy"}];
+
+$timeout(function(){
+    $scope.count = angular.element(document.getElementById("c")).find('li').length;
+  }, 1000);
+
+
+  });
+
+
+
+
+</script>
+
+  </body>
+</html>
