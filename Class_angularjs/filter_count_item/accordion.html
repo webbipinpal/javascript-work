@@ -12,14 +12,14 @@
   <body ng-app="myApp">
 	<div class="main_cont" ng-controller="myCtrl">
 	<div class="left_side one_third-sm">
-		<div class="all-item"><span class="item--title">All</span> <span class="item--coutn">85</span></div>
+		<div class="all-item"><span class="item--title">All</span> <span class="item--coutn">{{allcount}}</span></div>
 		<div class="section_1 menu-list">
 			<ul>
-				<li ng-click="item1()"><span class="item--title">Menu Item1</span> <span class="item--coutn">12</span></li>
-				<li ng-click="item2()"><span class="item--title">Menu Item2</span> <span class="item--coutn">01</span></li>
-				<li ng-click="item3()"><span class="item--title">Menu Item3</span> <span class="item--coutn">08</span></li>
-				<li><span class="item--title">Menu Item4</span> <span class="item--coutn">03</span></li>
-				<li><span class="item--title">Menu Item5</span> <span class="item--coutn">58</span></li>
+				<li ng-click="myClick();"><span class="item--title">Menu Item1</span> <span class="item--coutn">{{a}}</span></li>
+				<li ><span class="item--title">Menu Item2</span> <span class="item--coutn">{{b}}</span></li>
+				<li><span class="item--title">Menu Item3</span> <span class="item--coutn">{{c}}</span></li>
+				<li><span class="item--title">Menu Item4</span> <span class="item--coutn">{{d}}</span></li>
+				<li><span class="item--title">Menu Item5</span> <span class="item--coutn">{{e}}</span></li>
 			</ul>
 		</div>
 		<div class="section_2 menu-list">
@@ -33,11 +33,8 @@
 		</div>
 		<div class="section_3 menu-list">
 			<ul>
-				<li><span class="item--title">Menu Item6</span> <span class="item--coutn">45</span></li>
-				<li><span class="item--title">Menu Item7</span> <span class="item--coutn">20</span></li>
-				<li><span class="item--title">Menu Item8</span> <span class="item--coutn">15</span></li>
-				<li><span class="item--title">Menu Item9</span> <span class="item--coutn">12</span></li>
-				<li><span class="item--title">Menu Item10</span> <span class="item--coutn">07</span></li>
+				<li><span class="item--title">Menu Item6</span> <span class="item--coutn">{{f}}</span></li>
+				<li><span class="item--title">Menu Item7</span> <span class="item--coutn">{{g}}</span></li>
 			</ul>
 		</div>
 		
@@ -46,107 +43,38 @@
 		<header class="header-top"></header>
 		<div class="content_cont">
 
-			<!-- Menu Item1 start here -->
-			<section ng-show="MenuItem1" class="section-container services-section ">
-			  <div class="">
-					
-						<div class="row no-gutters">
-						<div class="services_cont">
-							<div class="one_half-sm">
-								<div class="services_cont--list sales clearfix">	
-									
-									<h2 class="big">Sales</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgorange">contact now</button>
-									
-								</div>					
-							</div>
-							
-							<div class="one_half-sm">
-								<div class="services_cont--list after_sale_services">
-									<h2 class="big">After Sale Services </h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgdark">contact us</button>
-								</div>					
-							</div>
-							<div class="one_half-sm">
-								<div class="services_cont--list workshop">
-									<h2 class="big">WorkShop</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgdark">view details</button>
-								</div>					
-							</div>
-							<div class="one_half-sm">
-								<div class="services_cont--list trailer">
-									<h2 class="big">trailer</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgorange">view details</button>
-								</div>					
-							</div>
-							<div class="one_half-sm">
-								<div class="services_cont--list spare_parts">
-									<h2 class="big">Spare Parts</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgorange">all spare parts</button>
-								</div>					
-							</div>
-							<div class="one_half-sm">
-								<div class="services_cont--list plant_hire">
-									<h2 class="big">Plant Hire</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgdark">view details</button>
-								</div>					
-							</div>	
-						</div>
-					</div>
-			  </div>
-			</section>
-			<!-- Menu Item1 start here -->
-			<!-- Menu Item2 start here -->
-			<section ng-show="MenuItem2" class="section-container services-section ">
-			  <div class="">
-					
-						<div class="row no-gutters">
-						<div class="services_cont">
-							<div class="one_half-sm">
-								<div class="services_cont--list sales clearfix">			
-									<h2 class="big">Sales</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgorange">contact now</button>
-									
-								</div>					
-							</div>
-							<div class="one_half-sm">
-								<div class="services_cont--list sales clearfix">			
-									<h2 class="big">Sales</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgorange">contact now</button>
-									
-								</div>					
-							</div>
-							
-							
-						</div>
-					</div>
-			  </div>
-			</section>
-			<!-- Menu Item2 start here -->
-			<!-- Menu Item3 start here -->
-			<section ng-show="MenuItem3" class="section-container services-section ">				
-					<div class="row no-gutters">
-						<div class="services_cont">
-							<div class="one_half-sm">
-								<div class="services_cont--list sales clearfix">
-									<h2 class="big">Sales</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisl leo. Donec nec gravida sem, elementum rutrum turpis. Praesent gravida ultricies ullamcorper.</p>
-									<button class="btn btn--bgorange">contact now</button>
-									
-								</div>					
-							</div>
-						</div>
-					</div>
-			</section>
-			<!-- Menu Item3 start here -->
+		<ul ng-show="isShown" ng-repeat="x in collage">
+			<li> {{x.name}}</li>
+			<li> {{x.title}}</li>
+			<li> {{x.adds}}</li>
+			<li> {{x.cont}}</li>
+		</ul>
+		
+		<ul ng-show="isShown" ng-repeat="x in collage2">
+			<li> {{x.name}}</li>
+			<li> {{x.title}}</li>
+			<li> {{x.adds}}</li>
+			<li> {{x.cont}}</li>
+		</ul>
+		<ul ng-show="isShown" ng-repeat="x in collage3">
+			<li> {{x.name}}</li>
+			<li> {{x.title}}</li>
+			<li> {{x.adds}}</li>
+			<li> {{x.cont}}</li>
+		</ul>
+		<ul ng-show="isShown" ng-repeat="x in collage4">
+			<li> {{x.name}}</li>
+			<li> {{x.title}}</li>
+			<li> {{x.adds}}</li>
+			<li> {{x.cont}}</li>
+		</ul>
+		<ul ng-show="isShown" ng-repeat="x in collage4">
+			<li> {{x.name}}</li>
+			<li> {{x.title}}</li>
+			<li> {{x.adds}}</li>
+			<li> {{x.cont}}</li>
+		</ul>
+			
 		
 		</div>
 	</div>
