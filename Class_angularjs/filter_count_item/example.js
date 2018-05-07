@@ -2,63 +2,63 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope){
 	
 	$scope.collage = [{
-		"name":"collage menu1",
+		"name":"Menu Item1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage item1",
+		"name":"Menu Item1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage list1",
+		"name":"Menu Item1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	}];
 	$scope.collage2 = [{
-		"name":"collage2 menu1",
+		"name":"Menu Item2",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage2 item1",
+		"name":"Menu Item2",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	}];
 	$scope.collage3 = [{
-		"name":"collage3 menu1",
+		"name":"Menu Item3",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage3 item1",
+		"name":"Menu Item3",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage3 item2",
+		"name":"Menu Item3",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage3 item3",
+		"name":"Menu Item3",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
@@ -66,98 +66,98 @@ app.controller('myCtrl', function($scope){
 	}];
 	
 	$scope.collage4 = [{
-		"name":"collage4 menu1",
+		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage4 item1",
+		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage4 item2",
+		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage4 item3",
+		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage4 item4",
+		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage4 item5",
+		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	}];
 	$scope.collage5 = [{
-		"name":"collage5 menu1",
+		"name":"Menu Item5",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	}];
 	$scope.collage6 = [{
-		"name":"collage6 menu1",
+		"name":"Menu Item6",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage6 menu1",
+		"name":"Menu Item6",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	}];
 	$scope.collage7 = [{
-		"name":"collage7 menu1",
+		"name":"Menu Item7",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage7 menu1",
+		"name":"Menu Item7",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage7 menu1",
+		"name":"Menu Item7",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage7 menu1",
+		"name":"Menu Item7",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
 		
 	},
 	{
-		"name":"collage7 menu1",
+		"name":"Menu Item7",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564"
