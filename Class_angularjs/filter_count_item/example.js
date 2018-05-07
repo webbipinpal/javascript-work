@@ -213,9 +213,9 @@ app.controller('myCtrl', function($scope){
 		
 	
 	$scope.isShown = true;
-	$scope.myClick = function(){
-		$scope.isShown = false;
-		
+	$scope.myClick = function(value){
+		var a = $scope.v1=value;
+		alert(a);
 	}
 
 //checkbox item
