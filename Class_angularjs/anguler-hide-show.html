@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+
+<script>
+    var app = angular.module('app', []);
+    app.controller('ctrl', ['$scope',
+
+    function($scope) {
+        $scope.boxes = [{
+            link: 'link1',
+            content: 'content1'
+        }, {
+            link: 'link2',
+            content: 'content2'
+        }, {
+            link: 'link3',
+            content: 'content3'
+        }, {
+            link: 'link4',
+            content: 'content4'
+        }, {
+            link: 'link5',
+            content: 'content5'
+        }, {
+            link: 'link6',
+            content: 'content6'
+        }];
+
+        $scope.selected = {
+            id : 0
+        };
+    }]);
+</script>
+<div ng-app="app" ng-controller="ctrl">
+    <ul>
+        <li ng-repeat="(id, box) in boxes" ng-click="selected.id = id">{{box.link}}</li>
+    </ul>
+    <div>{{boxes[selected.id].content}}</div>
+</div>
+
+</body>
+</html>

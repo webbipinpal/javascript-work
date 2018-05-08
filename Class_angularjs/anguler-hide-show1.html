@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  ng-app>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body>
+ 
+<ul>
+    <li><a href ng-click="selected=1">First</a></li>
+    <li><a href ng-click="selected=2">Second</a></li>
+    <li><a href ng-click="selected=3">Third</a></li>
+</ul>
+
+<div ng-show="selected == 1" >
+    This is first content...
+</div>
+
+<div ng-show="selected == 2">
+    This is second content...
+</div>
+
+<div ng-show="selected == 3">
+    This is third content...
+</div>
+<script type='text/javascript'>
+
+</script>
+</body>
+</html>
