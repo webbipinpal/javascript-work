@@ -15,7 +15,7 @@
 		<div class="all-item"><span class="item--title">All</span> <span class="item--coutn">{{allcount}}</span></div>
 		<div class="section_1 menu-list">
 			<ul>
-				<li ng-click="myClick();"><span class="item--title">Menu Item1</span> <span class="item--coutn">{{a}}</span></li>
+				<li ng-click="myClick();" value="abc"><span class="item--title">Menu Item1</span> <span class="item--coutn">{{a}}</span></li>
 				<li ><span class="item--title">Menu Item2</span> <span class="item--coutn">{{b}}</span></li>
 				<li><span class="item--title">Menu Item3</span> <span class="item--coutn">{{c}}</span></li>
 				<li><span class="item--title">Menu Item4</span> <span class="item--coutn">{{d}}</span></li>
@@ -43,7 +43,7 @@
 		<header class="header-top"></header>
 		<div class="content_cont">
 
-		<ul ng-show="isShown" ng-repeat="x in collage">
+		<ul ng-show="isShown('abc')" ng-repeat="x in collage">
 			<li> {{x.name}}</li>
 			<li> {{x.title}}</li>
 			<li> {{x.adds}}</li>
