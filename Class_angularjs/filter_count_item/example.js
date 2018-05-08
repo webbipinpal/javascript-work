@@ -211,11 +211,55 @@ app.controller('myCtrl', function($scope){
 	$scope.f = $scope.collage6.length;
 	$scope.g = $scope.collage7.length;
 		
-	
-	$scope.isShown = true;
+	$scope.c1=1;
+	$scope.c2=2;
+	$scope.c3=3;
+	$scope.c4=4;
+	$scope.c5=5;
+	$scope.c6=6;
+	$scope.c7=7;
 	$scope.myClick = function(value){
+		switch(value)
+		{
+			case 1:
+					$scope.c1=1;
+					$scope.c2=0;
+					$scope.c3=0;
+					$scope.c4=0;
+					$scope.c5=0;
+					$scope.c6=0;
+					$scope.c7=0;
+					break;
+			case 2:
+					$scope.c1=0;
+					$scope.c2=2;
+					$scope.c3=0;
+					$scope.c4=0;
+					$scope.c5=0;
+					$scope.c6=0;
+					$scope.c7=0;
+					break;
+			case 3:
+					$scope.c1=0;
+					$scope.c2=0;
+					$scope.c3=3;
+					$scope.c4=0;
+					$scope.c5=0;
+					$scope.c6=0;
+					$scope.c7=0;
+			default: 
+					$scope.c1=1;
+					$scope.c2=2;
+					$scope.c3=3;
+					$scope.c4=4;
+					$scope.c5=5;
+					$scope.c6=6;
+					$scope.c7=7;
+		}
+		$scope.isShown =value;
 		var a = $scope.v1=value;
-		alert(a);
+		
+		
 	}
 
 //checkbox item

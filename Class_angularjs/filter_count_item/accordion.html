@@ -35,8 +35,8 @@
 		</div>
 		<div class="section_3 menu-list">
 			<ul>
-				<li><span class="item--title">Menu Item6</span> <span class="item--coutn">{{f}}</span></li>
-				<li><span class="item--title">Menu Item7</span> <span class="item--coutn">{{g}}</span></li>
+				<li ng-click="myClick(6);"><span class="item--title">Menu Item6</span> <span class="item--coutn">{{f}}</span></li>
+				<li ng-click="myClick(7);"><span class="item--title">Menu Item7</span> <span class="item--coutn">{{g}}</span></li>
 			</ul>
 		</div>
 		
@@ -45,44 +45,44 @@
 		<header class="header-top"></header>
 		<div class="content_cont">
 
-			<ul ng-show="isShown" ng-repeat="x in collage">
+			<ul ng-show="c1==1" ng-repeat="x in collage">
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
 			
-			<ul ng-show="isShown" ng-repeat="x in collage2">
+			<ul ng-show="c2==2" ng-repeat="x in collage2">
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
-			<ul ng-show="isShown" ng-repeat="x in collage3">
+			<ul ng-show="c3==3" ng-repeat="x in collage3">
 				<li> <h1>{{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
-			<ul ng-show="isShown" ng-repeat="x in collage4">
+			<ul ng-show="c4==4" ng-repeat="x in collage4">
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
-			<ul ng-show="isShown" ng-repeat="x in collage5">
+			<ul ng-show="c5==5" ng-repeat="x in collage5">
 				<li> <h1>{{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
-			<ul ng-show="isShown" ng-repeat="x in collage6">
+			<ul ng-show="c6==6" ng-repeat="x in collage6">
 				<li> <h1>{{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
-			<ul ng-show="isShown" ng-repeat="x in collage7">
+			<ul ng-show="c7==7" ng-repeat="x in collage7">
 				<li> <h1>{{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
