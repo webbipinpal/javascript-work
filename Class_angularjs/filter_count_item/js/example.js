@@ -183,8 +183,9 @@ app.controller('myCtrl', function($scope){
 		
 	}];
 	
+
 //checkbox item
-	$scope.checkbox = [{
+	/*$scope.checkbox = [{
 		"name":"Checkbox Title 1",
 		"title":"First Checkbox",
 		"adds":"Fkj54524",
@@ -327,9 +328,9 @@ app.controller('myCtrl', function($scope){
 		
 		
 	}
-
+*/
 //checkbox item
-	$scope.check = $scope.checkbox.length;
+/*	$scope.check = $scope.checkbox.length;
 	$scope.check2 = $scope.checkbox2.length;
 	$scope.check3 = $scope.checkbox3.length;
 	$scope.check4 = $scope.checkbox4.length;
@@ -341,11 +342,11 @@ app.controller('myCtrl', function($scope){
 		
 	}
 
-
+*/
 
 // all count
-$scope.allcount = $scope.a + $scope.b + $scope.c + $scope.d + $scope.e + $scope.f + $scope.g + $scope.check + $scope.check2 + $scope.check3 + $scope.check4 + $scope.check5;
-
+/*scope.allcount = $scope.a + $scope.b + $scope.c + $scope.d + $scope.e + $scope.f + $scope.g + $scope.check + $scope.check2 + $scope.check3 + $scope.check4 + $scope.check5;
+*/
 });
 
 
