@@ -5,165 +5,184 @@ app.controller('myCtrl', function($scope){
 		"name":"Menu Item1",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage1"
 		
 	},
 	{
 		"name":"Menu Item1",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage1"
 		
 	},
 	{
 		"name":"Menu Item1",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	}];
-	$scope.collage2 = [{
-		"name":"Menu Item2",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	},
+		"cont":"564564564",
+		"type":"collage1"
+	},	
 	{
 		"name":"Menu Item2",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage2"
 		
-	}];
-	$scope.collage3 = [{
-		"name":"Menu Item3",
+	},
+	{
+		"name":"Menu Item2",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage2"
 		
 	},
 	{
 		"name":"Menu Item3",
 		"title":"best school",
+		"type":"collage3",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage3"
+		
+	},
+	{
+		"name":"Menu Item3",
+		"title":"best school",
+		"type":"collage3",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage3"
 		
 	},
 	{
 		"name":"Menu Item3",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage3"
 		
 	},
 	{
 		"name":"Menu Item3",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	}];
-	
-	$scope.collage4 = [{
+		"cont":"564564564",
+		"type":"collage4"
+	},
+	{
 		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage4"
 		
 	},
 	{
 		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage4"
 		
 	},
 	{
 		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage4"
 		
 	},
 	{
 		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage4"
 		
 	},
 	{
 		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage4"
 		
 	},
 	{
 		"name":"Menu Item4",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	}];
-	$scope.collage5 = [{
+		"cont":"564564564",
+		"type":"collage4"
+	},
+	{
 		"name":"Menu Item5",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	}];
-	$scope.collage6 = [{
-		"name":"Menu Item6",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
+		"cont":"564564564",
+		"type":"collage5"
 	},
 	{
 		"name":"Menu Item6",
 		"title":"best school",
 		"adds":"Fkj54524",
-		"cont":"564564564"
+		"cont":"564564564",
+		"type":"collage4"
+		
+	},
+	{
+		"name":"Menu Item6",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage6"
+	},
+	{
+		"name":"Menu Item7",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage7"
+		
+	},
+	{
+		"name":"Menu Item7",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage7"
+		
+	},
+	{
+		"name":"Menu Item7",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage7"
+		
+	},
+	{
+		"name":"Menu Item7",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage7"
+		
+	},
+	{
+		"name":"Menu Item7",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"collage7"
 		
 	}];
-	$scope.collage7 = [{
-		"name":"Menu Item7",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	},
-	{
-		"name":"Menu Item7",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	},
-	{
-		"name":"Menu Item7",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	},
-	{
-		"name":"Menu Item7",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	},
-	{
-		"name":"Menu Item7",
-		"title":"best school",
-		"adds":"Fkj54524",
-		"cont":"564564564"
-		
-	}];
-
+	
 //checkbox item
 	$scope.checkbox = [{
 		"name":"Checkbox Title 1",
@@ -219,6 +238,8 @@ app.controller('myCtrl', function($scope){
 	$scope.c6=6;
 	$scope.c7=7;
 	$scope.myClick = function(value){
+		
+		
 		switch(value)
 		{
 			case 1:
@@ -247,6 +268,51 @@ app.controller('myCtrl', function($scope){
 					$scope.c5=0;
 					$scope.c6=0;
 					$scope.c7=0;
+			case 4:
+					$scope.c1=0;
+					$scope.c2=0;
+					$scope.c3=0;
+					$scope.c4=4;
+					$scope.c5=0;
+					$scope.c6=0;
+					$scope.c7=0;
+					break;
+			case 5:
+					$scope.c1=0;
+					$scope.c2=0;
+					$scope.c3=0;
+					$scope.c4=0;
+					$scope.c5=5;
+					$scope.c6=0;
+					$scope.c7=0;
+					break;
+			case 6:
+					$scope.c1=0;
+					$scope.c2=0;
+					$scope.c3=0;
+					$scope.c4=0;
+					$scope.c5=0;
+					$scope.c6=6;
+					$scope.c7=0;
+					break;
+			case 7:
+					$scope.c1=0;
+					$scope.c2=0;
+					$scope.c3=0;
+					$scope.c4=0;
+					$scope.c5=0;
+					$scope.c6=0;
+					$scope.c7=7;
+					break;
+			case 8:
+					$scope.c1=1;
+					$scope.c2=2;
+					$scope.c3=3;
+					$scope.c4=4;
+					$scope.c5=5;
+					$scope.c6=6;
+					$scope.c7=7;
+					break;
 			default: 
 					$scope.c1=1;
 					$scope.c2=2;
