@@ -1,6 +1,7 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope){
 	
+	$scope.c1="collage1";
 	$scope.collage = [{
 		"name":"Menu Item1",
 		"title":"best school",
@@ -8,7 +9,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"collage1"
 		
-	},
+	}
+	,
 	{
 		"name":"Menu Item1",
 		"title":"best school",

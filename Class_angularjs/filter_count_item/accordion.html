@@ -47,12 +47,12 @@
 		<header class="header-top"></header>
 		<div class="content_cont">
 
-			<ul ng-repeat="x in collage | filter:collage1"> 
+			<ul ng-repeat="x in collage | filter:type:c1"> 
 		
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
-				<li>{{x.type}}<li>
+				<li>{{x.type}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
 			<!--
