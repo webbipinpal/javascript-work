@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/example.js"></script>
+  </head>
+
+  <body>
+	<div ng-app="myapp" ng-controller="mycontroller" class="container">
+  <h4>title1</h4>
+  <ul class="list-group" ng-repeat='item in items | customArray:myitems:"id"'>
+    <li class="list-group-item" >{{item.name}}</li>
+	<li class="list-group-item" >{{item.id}}</li>
+  </ul>
+  <h4>title2</h4>
+  <ul class="list-group" ng-repeat='item in items | customArray1:myitems2:"id"'>
+    <li class="list-group-item" >{{item.name}}</li>
+	<li class="list-group-item" >{{item.id}}</li>
+  </ul>
+  <h4>Title 3</h4>
+  <ul class="list-group" ng-repeat='item in items | customArray2:myitems3:"id"'>
+    <li class="list-group-item" >{{item.name}}</li>
+	<li class="list-group-item" >{{item.id}}</li>
+  </ul>
+
+</div>
+  </body>
+</html>
