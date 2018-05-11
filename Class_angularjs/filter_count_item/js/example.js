@@ -194,8 +194,10 @@ app.controller('myCtrl', function($scope){
 	$scope.mylist5 = ['collage5'];
 	$scope.mylist6 = ['collage6'];
 	$scope.mylist7 = ['collage7'];
+	
 		$scope.a = $scope.collage.length;
 		console.log($scope.a);
+		
 }).filter('customArray1', function($filter){
     return function(list, arrayFilter, element){
         if(arrayFilter){
