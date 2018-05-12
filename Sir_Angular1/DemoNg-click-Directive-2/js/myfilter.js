@@ -24,8 +24,8 @@ app.filter("myFilter",function(){
     }
 });
 app.filter("myFilter1",function(){
-    return function(input, option){
-        return input.substring(0, option).toUpperCase();
+    return function(input,option){
+        return input.substring(0,option).toUpperCase();
     }
 });
 app.filter("myFilter2",function(){
@@ -35,14 +35,15 @@ app.filter("myFilter2",function(){
         }
         else
         {
-            return input.substring(input,option).toUpperCase();
+             return input.substring(0,option).toUpperCase();
+           // return input.substring(input,option).toUpperCase();
         }    
     }
 });
 app.filter("idFilter",function(){
     return function(input){
         var output=[];
-        angular.forEach(input,function(value){
+        angular.forEach(input,function(value,key){
             if(value.id>2)
                 {
                     output.push(value);
@@ -59,8 +60,8 @@ app.filter("idFilter1",function(){
             return input;
         }
         else{
-            angular.forEach(input,function(value){
-            if(value.id<=option)
+            angular.forEach(input,function(value,key){
+            if(value.id>option)
             {
                 output.push(value);
             }

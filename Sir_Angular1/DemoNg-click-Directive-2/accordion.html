@@ -16,18 +16,18 @@
          Enter the Number of Charcter ot Search Name: <input type="text" ng-model="limit" />
           <table class="table table-bordered">
             <tr class="bg-success">
-                <th><a href="#">ID</a></th>
-                <th><a href="#">Name</a></th>
-                <th><a href="#">Gender</a></th>
-                <th><a href="#">City</a></th>
+                <th><a href="#" ng-click="order='id'">ID</a></th>
+                <th><a href="#" ng-click="order='name'">Name</a></th>
+                <th><a href="#" ng-click="order='Gender'">Gender</a></th>
+                <th><a href="#" ng-click="order='City'">City</a></th>
             </tr>
-               <!--<tr ng-repeat="user in users">
+             <!--  <tr ng-repeat="user in users">
                     <td>{{user.id}}</td>
                     <td>{{user.name| myFilter2:limit}}</td>
                     <td>{{user.Gender}}</td>
                     <td>{{user.City}}</td>
                 </tr> -->
-                <tr ng-repeat="user in users | idFilter:limit">
+               <tr ng-repeat="user in users | orderBy:order | idFilter1:limit"><!-- ng-show="available"-->
                     <td>{{user.id}}</td>
                     <td>{{user.name}}</td>
                     <td>{{user.Gender}}</td>

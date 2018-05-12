@@ -1,6 +1,16 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope){
-
+	
+	$scope.collageName = [
+	
+	{"colName":"Collage Name 1", "type":"collage1"},
+	{"colName":"Collage Name 2", "type":"collage2"},
+	{"colName":"Collage Name 3", "type":"collage3"},
+	{"colName":"Collage Name 4", "type":"collage4"},
+	{"colName":"Collage Name 5", "type":"collage5"}
+	
+	];
+	
 	$scope.collage = [{
 		"name":"Collage Name 1 Item 1",
 		"title":"best school",
