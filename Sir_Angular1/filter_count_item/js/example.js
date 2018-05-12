@@ -234,6 +234,7 @@ app.controller('myCtrl', function($scope){
             return $filter("filter")(list, function(listItem){
                 return arrayFilter.indexOf(listItem[element]) != -1;
             });
+			
         }
 	
     };
