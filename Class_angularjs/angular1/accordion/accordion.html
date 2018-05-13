@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="plunker">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+    <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    <script src="example.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+<div ng-controller="AccordionDemoCtrl">
+  <accordion>
+    <accordion-group is-open="first.open">
+
+  <accordion-heading>
+    <h3>Some Header</h3>
+  </accordion-heading>
+
+  <h4>Some pretty awesome content!</h4>
+</accordion-group>  
+
+
+<accordion-group>
+
+  <accordion-heading>
+    <h3>Some Header</h3>
+  </accordion-heading>
+
+  <h4>Some pretty awesome content!</h4>
+</accordion-group>
+  </accordion>    
+</div>
+  </body>
+</html>

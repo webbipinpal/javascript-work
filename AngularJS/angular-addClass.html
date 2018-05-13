@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+ <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   <style>
+   .div{
+     width: 100px;
+     height: 100px;
+     border: 1px solid black;
+     margin-right: 20px;
+     margin-top: 10px;
+   }
+   .red{
+     background-color: red;
+   }
+   .blue{
+     background-color: blue;
+   }
+   </style>
+ </head>
+ <body ng-app='myapp'>
+
+   <div ng-controller="myCtrl">
+     <div ng-class='{ div: true, red: class1 }'></div>
+     <div ng-class='{ div: true, blue: class2 }'></div>
+     <br><br>
+     <input type='button' value='Add red class' ng-click='addRedClass()' />
+     <input type='button' value='Add blue class' ng-click='addBlueClass()' />
+   </div>
+ 
+   <!-- Script -->
+   <script>
+   var fetch = angular.module('myapp', []);
+
+   fetch.controller('myCtrl', ['$scope', '$http', function ($scope, $http) {
+     $scope.class1 = false;
+     $scope.class2 = false;
+
+     // Add red remove
+     $scope.addRedClass = function(){
+       $scope.class1 = true;
+     }
+
+     // Add blue class
+     $scope.addBlueClass = function(){
+       $scope.class2 = true;
+     }
+
+   }]);
+   </script>
+ </body>
+</html>

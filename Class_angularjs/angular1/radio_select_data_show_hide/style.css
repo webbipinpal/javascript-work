@@ -1,0 +1,37 @@
+.accordion-title {
+	border: 1px solid #c5c5c5;
+	font-weight: normal;
+	color: #454545;
+	font-weight: 500;
+	padding: 8px 15px 8px 25px;
+	margin: 2px 0 0;
+	border-radius: 4px;
+	background: #f6f6f6 url(images/accordion-icons.png);
+	background-repeat: no-repeat;
+	background-position: 3px 6px;
+}
+.active {
+	border: 1px solid #003eff;
+	background-color: #007fff;
+	font-weight: normal;
+	color: #ffffff;
+	background-position: -31px 6px;
+}
+.accordion-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+	padding:0;
+}
+
+.left-side{width: 15%; float: left;}
+.left-side ul, .left-side ul li{ padding:0; margin:0; list-style:none;}
+.left-side ul li{ margin-bottom: 1px; background-color: #e4e4e4; padding: 10px;}
+.right-side{ width: 85%; float: left;}
+.products__item{ margin-bottom:2.4rem; width:23%; margin-right:2%; float:left;}
+.products__item:last-child{ margin-right:0;}
+.products__item .products__item__details{ padding:0 10px 10px;}
+.products__item .products__item--img{ margin-bottom:1.2rem; }
+.products__item .products__item--img a{ display:inline-block; border: 1px solid #f1f1f1; padding: 4px; border-radius: 4px;}
+.products__item .item--title{ margin:0 0 0.6rem; padding:0; font-size:18px; line-height:1.5; text-align:center;}
+.products__item--img img{ border-radius:4px; width:100%;}

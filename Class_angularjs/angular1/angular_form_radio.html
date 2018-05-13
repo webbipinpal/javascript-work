@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<style>
+	.side_menu{ width:15%; margin-right:5%; float:left;}
+	.container{ width:80%; float:left;}
+</style>
+</head>
+<body ng-app="">
+
+<div class="side_menu">
+	<ul>
+		<li><input type="radio" ng-model="myRadio" value="menu" /> menu</li> 
+		<li><input type="radio" ng-model="myRadio" value="menu1"/> menu1</li> 
+		<li><input type="radio" ng-model="myRadio" value="menu2"/> menu2</li> 
+	</ul>
+</div>
+
+
+<div class="container" ng-switch="myRadio">
+	<div class="" ng-switch-when="menu">
+		<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+		<hr />
+	</div>
+	<div class="" ng-switch-when="menu1">
+		<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+		<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+		<hr />
+	</div>
+	<div class="" ng-switch-when="menu2">
+		<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+		<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+		<p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+	</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>transformer</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<script>
+			function myfunction(data)
+			{
+				//var inputText = $('#name').val();	
+				//var data=document.getElementById("name").value;
+				
+				if(data == ''){
+					alert('input is empty');
+				}else{
+					alert('input have value: '+data);
+				}
+			}
+		</script>
+		
+	</head>
+	<body>	
+		<form class="form">
+				<input type="text" oninput="myfunction(this.value)"  id="name" />	
+				<button >Submit</button>
+		</form>
+		
+	</body>
+</html> 

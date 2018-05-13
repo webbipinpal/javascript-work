@@ -16,32 +16,19 @@
 		<div class="search_cont"> <input type="text" ng-model="searchitem"></div>
 		<div class="all-item" ng-click="myClick(8);"><span class="item--title">All</span> <span class="item--coutn">{{allitem}}</span></div>
 		<div class="section_1 menu-list">
-			<h3>Collages</h3>
+			<h3>colleges</h3>
+			<!--<ul>
+				<li ng-click="myClick(1);"><span class="item--title">college Name 1</span> <span class="item--coutn">{{college1item}}</span></li>
+				<li ng-click="myClick(2);"><span class="item--title">college Name 2</span> <span class="item--coutn">{{college2item}}</span></li>
+				<li ng-click="myClick(3);"><span class="item--title">college Name 3</span> <span class="item--coutn">{{college3item}}</span></li>
+				<li ng-click="myClick(4);"><span class="item--title">college Name 4</span> <span class="item--coutn">{{college4item}}</span></li>
+				<li ng-click="myClick(5);"><span class="item--title">college Name 5</span> <span class="item--coutn">{{college5item}}</span></li>
+			</ul>-->
+			
 			<ul>
-				<li ng-click="myClick(1);"><span class="item--title">Collage Name 1</span> <span class="item--coutn">{{collage1item}}</span></li>
-				<li ng-click="myClick(2);"><span class="item--title">Collage Name 2</span> <span class="item--coutn">{{collage2item}}</span></li>
-				<li ng-click="myClick(3);"><span class="item--title">Collage Name 3</span> <span class="item--coutn">{{collage3item}}</span></li>
-				<li ng-click="myClick(4);"><span class="item--title">Collage Name 4</span> <span class="item--coutn">{{collage4item}}</span></li>
-				<li ng-click="myClick(5);"><span class="item--title">Collage Name 5</span> <span class="item--coutn">{{collage5item}}</span></li>
+				<li ng-repeat="collegeName in collegeName"><span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{collegeName.college1_item}}</span></li>
 			</ul>
 			
-			
-		</div>
-		<div class="section_2 menu-list">
-			<h3>section_2</h3>
-			<ul>
-				<li><input type="checkbox"  value=""/> <span class="item--title">list item2</span> <span class="item--coutn">{{check}}</span></li>
-				<li><input type="checkbox" /> <span class="item--title">list item3</span> <span class="item--coutn">{{check2}}</span></li>
-				<li><input type="checkbox" /> <span class="item--title">list item4</span> <span class="item--coutn">{{check3}}</span></li>
-				<li><input type="checkbox" /> <span class="item--title">list item5</span> <span class="item--coutn">{{check4}}</span></li>
-				<li><input type="checkbox" /> <span class="item--title">list item6</span> <span class="item--coutn">{{check5}}</span></li>
-			</ul>
-		</div>
-		<div class="section_3 menu-list">
-			<ul>
-				<li ng-click="myClick(6);"><span class="item--title">Collage Name 6</span> <span class="item--coutn">{{collage6item}}</span></li>
-				<li ng-click="myClick(7);"><span class="item--title">Collage Name 7</span> <span class="item--coutn">{{collage7item}}</span></li>
-			</ul>
 		</div>
 		
 	</div>
@@ -49,7 +36,7 @@
 		<header class="header-top"></header>
 		<div class="content_cont">
 
-			<ul ng-repeat="x in collage | customArray1:mylist1:'type'| filter:searchitem"> 
+			<ul ng-repeat="x in college | filter:searchitem"> 
 		
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
@@ -57,48 +44,7 @@
 				<li>{{x.type}}</li>
 				<li> {{x.cont}}</li>
 			</ul>
-			<ul ng-repeat="x in collage | customArray2:mylist2:'type' | filter:searchitem">
-				<li><h1> {{x.name}}</h1></li>
-				<li> {{x.title}}</li>
-				<li> {{x.adds}}</li>
-				<li>{{x.type}}</li>
-				<li> {{x.cont}}</li>
-			</ul>
-			<ul ng-repeat="x in collage | customArray3:mylist3:'type' | filter:searchitem">
-				<li> <h1>{{x.name}}</h1></li>
-				<li> {{x.title}}</li>
-				<li> {{x.adds}}</li>
-				<li>{{x.type}}</li>
-				<li> {{x.cont}}</li>
-			</ul>
-			<ul ng-repeat="x in collage | customArray4:mylist4:'type' | filter:searchitem">
-				<li><h1> {{x.name}}</h1></li>
-				<li> {{x.title}}</li>
-				<li> {{x.adds}}</li>
-				<li>{{x.type}}</li>
-				<li> {{x.cont}}</li>
-			</ul>
-			<ul ng-repeat="x in collage | customArray5:mylist5:'type' | filter:searchitem">
-				<li> <h1>{{x.name}}</h1></li>
-				<li> {{x.title}}</li>
-				<li> {{x.adds}}</li>
-				<li>{{x.type}}</li>
-				<li> {{x.cont}}</li>
-			</ul>
-			<ul ng-repeat="x in collage | customArray6:mylist6:'type' | filter:searchitem">
-				<li> <h1>{{x.name}}</h1></li>
-				<li> {{x.title}}</li>
-				<li> {{x.adds}}</li>
-				<li>{{x.type}}</li>
-				<li> {{x.cont}}</li>
-			</ul>
-			<ul ng-repeat="x in collage | customArray7:mylist7:'type' | filter:searchitem">
-				<li> <h1>{{x.name}}</h1></li>
-				<li> {{x.title}}</li>
-				<li> {{x.adds}}</li>
-				<li>{{x.type}}</li>
-				<li> {{x.cont}}</li>
-			</ul>
+			
 		</div>
 		
 	</div>

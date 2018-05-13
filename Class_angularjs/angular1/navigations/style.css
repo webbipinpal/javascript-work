@@ -1,0 +1,5 @@
+.main-manu{ width:100%; text-align:center;}
+.main-manu, .main-manu li{ padding:0; margin:0; list-style:none;}
+.main-manu li{display:inline-block;}
+.main-manu li a{ color:#000; padding:10px 15px; text-decoration:none; display:inline-block;}
+.main-manu li a:hover{ color:#555; text-decoration:underline;}

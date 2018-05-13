@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+<body ng-app="myApp" ng-controller="mycont">
+
+<p><a href="#/!">Main</a></p>
+
+<ul class="main-manu">
+		<li ng-repeat="x in nav"><a href="{{x}}">{{x}}</a></li>
+</ul>
+<!--<a href="#!red">Red</a>
+<a href="#!green">Green</a>
+<a href="#!blue">Blue</a-->
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+
+app.controller('mycont', function($scope){
+	$scope.nav = ["#!red", "#!green", "#!blue"];
+	
+});
+app.config(function($routeProvider) {
+
+    $routeProvider
+    .when("/", {
+        template : "main.htm"
+    })
+    .when("/red", {
+        template : "red.htm"
+    })
+    .when("/green", {
+        template : "green.htm"
+    })
+    .when("/blue", {
+        template : "blue.htm"
+    });
+});
+</script>
+
+<p>Click on the links.</p>
+
+<p>This example uses the ng-view directive as an attribute to a DIV element.</p>
+</body>
+</html>
