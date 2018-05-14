@@ -5,6 +5,7 @@
     <script src="js/ui-bootstrap-tpls-0-10-0.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/example.js"></script>
+	<script src="js/filterJs.js"></script>
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/grid.css" rel="stylesheet">
 	
@@ -16,28 +17,19 @@
 		<div class="search_cont"> <input type="text" ng-model="searchitem"></div>
 		<div class="all-item" ng-click="myClick(8);"><span class="item--title">All</span> <span class="item--coutn">{{allitem}}</span></div>
 		<div class="section_1 menu-list">
-			<h3>colleges</h3>
-			<!--<ul>
-				<li ng-click="myClick(1);"><span class="item--title">college Name 1</span> <span class="item--coutn">{{college1item}}</span></li>
-				<li ng-click="myClick(2);"><span class="item--title">college Name 2</span> <span class="item--coutn">{{college2item}}</span></li>
-				<li ng-click="myClick(3);"><span class="item--title">college Name 3</span> <span class="item--coutn">{{college3item}}</span></li>
-				<li ng-click="myClick(4);"><span class="item--title">college Name 4</span> <span class="item--coutn">{{college4item}}</span></li>
-				<li ng-click="myClick(5);"><span class="item--title">college Name 5</span> <span class="item--coutn">{{college5item}}</span></li>
-			</ul>-->
-			
+			<h3>colleges</h3>			
 			<ul>
-				<li ng-repeat="collegeName in collegeName"><span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{collegeName.college1_item}}</span></li>
+				<li ng-repeat="collegeName in collegeName"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{collegeName.college1_item}}</span></li>
 			</ul>
-			
+			 <input type="button" value={{city.cityName}} ng-click="ChangeCity(city.cityName)" />
+                                    <span>{{getCityCount(city.cityName)}}</span>
 		</div>
 		
 	</div>
 	<div class="right_side two_thirds-md">
 		<header class="header-top"></header>
 		<div class="content_cont">
-
-			<ul ng-repeat="x in college | filter:searchitem"> 
-		
+			<ul ng-repeat="x in college | idFilter1:DisplayCity | filter:searchitem">			
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
