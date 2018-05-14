@@ -15,14 +15,13 @@
 	
 	<div class="left_side one_third-sm">
 		<div class="search_cont"> <input type="text" ng-model="searchitem"></div>
-		<div class="all-item" ng-click="myClick(8);"><span class="item--title">All</span> <span class="item--coutn">{{allitem}}</span></div>
+		<div class="all-item" ng-click="displayAllProd(collegeName.type)"><span class="item--title">All</span> <span class="item--coutn">{{allitem}}</span></div>
 		<div class="section_1 menu-list">
 			<h3>colleges</h3>			
 			<ul>
-				<li ng-repeat="collegeName in collegeName"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{collegeName.college1_item}}</span></li>
+				<li ng-repeat="collegeName in collegeName" ng-click="displayProd(collegeName.type)"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{getCityCount(collegeName.type)}}</span></li>
 			</ul>
-			 <input type="button" value={{city.cityName}} ng-click="ChangeCity(city.cityName)" />
-                                    <span>{{getCityCount(city.cityName)}}</span>
+			 
 		</div>
 		
 	</div>

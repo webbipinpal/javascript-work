@@ -143,8 +143,26 @@ app.controller('myCtrl', function($scope){
 	
 	$scope.DisplayCity="";
 	
-	$scope.ChangeCity=function(type){
+	$scope.getCityCount=function(type){
+        var count=0;
+        $scope.college.filter(function(x){
+            if(x.type==type)
+            {
+               count++;     
+            }
+            
+        });
+        return count;
+    }
+
+	$scope.displayProd=function(type){
+
         $scope.DisplayCity=type;
+    }
+
+    $scope.displayAllProd=function(type){
+
+        $scope.DisplayCity='';
     }
 	
 	
