@@ -2,8 +2,6 @@
 
 app.filter("idFilter1",function(){
     return function(input,option){
-        console.log(option);
-        console.log(input);
         var output=[];
         if(option)
         {

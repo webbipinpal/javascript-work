@@ -16,7 +16,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college1"
+		"type":"college1",
+		"year":"2016"
 		
 	}
 	,
@@ -25,7 +26,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college1"
+		"type":"college1",
+		"year":"2016"
 		
 	},
 	{
@@ -33,14 +35,16 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college1"
+		"type":"college1",
+		"year":"2016"
 	},	
 	{
 		"name":"college Name 2 Item 1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college2"
+		"type":"college2",
+		"year":"2017"
 		
 	},
 	{
@@ -48,7 +52,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college2"
+		"type":"college2",
+		"year":"2017"
 		
 	},
 	{
@@ -57,7 +62,9 @@ app.controller('myCtrl', function($scope){
 		"type":"college3",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college3"
+		"type":"college3",
+		"year":"2018",
+		"year":"2018"
 		
 	},
 	{
@@ -66,7 +73,8 @@ app.controller('myCtrl', function($scope){
 		"type":"college3",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college3"
+		"type":"college3",
+		"year":"2018"
 		
 	},
 	{
@@ -157,13 +165,21 @@ app.controller('myCtrl', function($scope){
 
 	$scope.displayProd=function(type){
 
-        $scope.DisplayCity=type;
+		if(type=="all")
+		{
+			 $scope.DisplayCity="";
+		}
+		else
+        {
+			$scope.DisplayCity=type;
+		}
+		
     }
 
-    $scope.displayAllProd=function(type){
+    /*$scope.displayAllProd=function(type){
 
         $scope.DisplayCity='';
-    }
+    }*/
 	
 	
 
