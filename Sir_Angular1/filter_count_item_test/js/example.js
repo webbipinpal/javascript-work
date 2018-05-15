@@ -143,6 +143,21 @@ app.controller('myCtrl', function($scope){
 	
 	$scope.DisplayCity="";
 	
+	$scope.getCityCount=function(type)
+    {
+        var count=0;
+        console.log(type);
+        $scope.users.filter(function(collegeName){
+            
+            if(collegeName.x==type)
+            {
+               count++;     
+            }
+            
+        });
+        return count;
+    }
+	
 	$scope.ChangeCity=function(type){
         $scope.DisplayCity=type;
     }
