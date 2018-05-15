@@ -142,7 +142,7 @@ app.controller('myCtrl', function($scope){
 	$scope.allitem = $scope.college.length;
 	
 	$scope.DisplayCity="";
-
+	
 	$scope.getCityCount=function(type){
         var count=0;
         $scope.college.filter(function(x){
@@ -155,8 +155,8 @@ app.controller('myCtrl', function($scope){
         return count;
     }
 
-
 	$scope.displayProd=function(type){
+
         $scope.DisplayCity=type;
     }
 

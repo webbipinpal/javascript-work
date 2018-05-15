@@ -11,7 +11,6 @@ app.controller('myCtrl', function($scope){
 	
 	];
 
-
 	$scope.college = [{ 
 		"name":"college Name 1 Item 1",
 		"title":"best school",
@@ -141,91 +140,36 @@ app.controller('myCtrl', function($scope){
 	}];
 	
 	$scope.allitem = $scope.college.length;
+	
+	$scope.DisplayCity="";
+	
+	$scope.getCityCount=function(type){
+        var count=0;
+        $scope.college.filter(function(x){
+            if(x.type==type)
+            {
+               count++;     
+            }
+            
+        });
+        return count;
+    }
 
-	
-/*	
-	$scope.mylist1 = ['college1'];
-	$scope.mylist2 = ['college2'];
-	$scope.mylist3 = ['college3'];
-	$scope.mylist4 = ['college4'];
-	$scope.mylist5 = ['college5'];
-*/
-	
-/*
-    $scope.college1item=0;
-    $scope.college2item=0;
-    $scope.college3item=0;
-    $scope.college4item=0;
-    $scope.college5item=0;
-	
-	$scope.myClick = function(value){
-		
-		let a = $scope.a=value;
-		alert(a);
-		
-	}
-	
-	for(let i=0; i<$scope.college.length; i++){
-		if($scope.college[i].type === 'college1'){
-			$scope.college1item++;
-		}else if($scope.college[i].type === 'college2'){
-			$scope.college2item++;
-		}else if($scope.college[i].type === 'college3'){
-			$scope.college3item++;
-		}else if($scope.college[i].type === 'college4'){
-			$scope.college4item++;
-		}else if($scope.college[i].type === 'college5'){
-			$scope.college5item++;
-		}else if($scope.college[i].type === 'college6'){
-			$scope.college6item++;
-		}else if($scope.college[i].type === 'college7'){
-			$scope.college7item++;
-		}
+	$scope.displayProd=function(type){
 
-	}
-*/
-}).filter('customArray1', function($filter){
-    return function(list, arrayFilter, element){
-        if(arrayFilter){
-            return $filter("filter")(list, function(listItem){
-                return arrayFilter.indexOf(listItem[element]) != -1;
-            });
-			
-        }
+        $scope.DisplayCity=type;
+    }
+
+    $scope.displayAllProd=function(type){
+
+        $scope.DisplayCity='';
+    }
 	
-    };
-}).filter('customArray2', function($filter){
-    return function(list, arrayFilter, element){
-        if(arrayFilter){
-            return $filter("filter")(list, function(listItem){
-                return arrayFilter.indexOf(listItem[element]) != -1;
-            });
-        }
-    };
-}).filter('customArray3', function($filter){
-    return function(list, arrayFilter, element){
-        if(arrayFilter){
-            return $filter("filter")(list, function(listItem){
-                return arrayFilter.indexOf(listItem[element]) != -1;
-            });
-        }
-    };
-}).filter('customArray4', function($filter){
-    return function(list, arrayFilter, element){
-        if(arrayFilter){
-            return $filter("filter")(list, function(listItem){
-                return arrayFilter.indexOf(listItem[element]) != -1;
-            });
-        }
-    };
-}).filter('customArray5', function($filter){
-    return function(list, arrayFilter, element){
-        if(arrayFilter){
-            return $filter("filter")(list, function(listItem){
-                return arrayFilter.indexOf(listItem[element]) != -1;
-            });
-        }
-    };
+	
+
+
 });
+
+
 
 
