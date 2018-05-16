@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+{{myWelcome.Name}}
+
+</div>
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $scope.a = "bipin"
+	$http.get("data-json.js")
+	.then(function(response) {
+      $scope.myWelcome = response.userData;
+	  console.log(myWelcome);
+  });
+});
+</script>
+
+</body>
+</html>
