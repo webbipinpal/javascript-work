@@ -4,8 +4,8 @@ myApp.controller('myController', function($scope, $http){
 		.then(function (response){
 			$scope.jsondata = response.data;
 			console.log("status:" + response.status);
-		}).catch(function(response) {
-		  console.error('Error occurred:', response.status, response.data);
+		}).catch(function(error) {
+		  console.error('Error occurred:', error.status, error.data);
 		}).finally(function() {
 			 console.log("Task Finished.");
 		});
