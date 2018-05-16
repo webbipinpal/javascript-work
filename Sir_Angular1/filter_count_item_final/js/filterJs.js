@@ -1,5 +1,4 @@
 //display item with filter
-
 app.filter("idFilter1",function(){
     return function(input,option){
         var output=[];
@@ -19,3 +18,27 @@ app.filter("idFilter1",function(){
         }
     }
 });
+
+
+// display with years
+
+app.filter("yearsFilter",function(){
+    return function(ProYear,option){
+        var output=[];
+        if(option)
+        {
+            angular.forEach(ProYear,function(value,key){
+            if(value.year==option)
+            {
+                output.push(value);
+            }
+            });
+            return output;
+        }
+        else
+        {
+            return ProYear;
+        }
+    }
+});
+
