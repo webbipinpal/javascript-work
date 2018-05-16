@@ -1,5 +1,5 @@
 http://plnkr.co/edit/HCqcZMlRb20fLymxLrsO?p=preview
-
+https://www.peterbe.com/plog/promises-with-$http
 
 exm:
 
