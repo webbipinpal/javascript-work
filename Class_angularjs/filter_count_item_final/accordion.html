@@ -15,7 +15,7 @@
 	
 	<div class="left_side one_third-sm">
 		<div class="search_cont"> <input type="text" ng-model="searchitem"></div>
-		<div class="all-item" ng-click="displayAllProd(collegeName.type)"><span class="item--title">All</span> <span class="item--coutn">{{allitem}}</span></div>
+		<div class="all-item" ng-click="displayProd('all')"><span class="item--title">All</span> <span class="item--coutn">{{allitem}}</span></div>
 		<div class="section_1 menu-list">
 			<h3>colleges</h3>			
 			<ul>
@@ -26,14 +26,19 @@
 		
 	</div>
 	<div class="right_side two_thirds-md">
-		<header class="header-top"></header>
+		<header class="header-top">
+		<select>
+			<option ng-repeat="years in collegeListYear" ng-click="displayProYearwise(years.yearList)">{{years.yearList}}</option>
+		</select>
+		</header>
 		<div class="content_cont">
-			<ul ng-repeat="x in college | idFilter1:DisplayCity | filter:searchitem">			
+			<ul ng-repeat="x in college | idFilter1:DisplayProList | filter:searchitem | yearsFilter:ProYearList">			
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>
 				<li>{{x.type}}</li>
 				<li> {{x.cont}}</li>
+				<li> {{x.year}}</li>
 			</ul>
 			
 		</div>

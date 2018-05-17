@@ -21,14 +21,18 @@
 			<ul>
 				<li ng-repeat="collegeName in collegeName" ng-click="displayProd(collegeName.type)"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{getCityCount(collegeName.type)}}</span></li>
 			</ul>
+			
+			<ul>
+				<li ng-repeat="collegecheck in collegechecklist" ng-click="displayProd(collegeName.type)"> <input type="checkbox"> <span class="item--title">{{collegecheck.colName}}</span> <span class="item--coutn"></span></li>
+			</ul>
 			 
 		</div>
 		
 	</div>
 	<div class="right_side two_thirds-md">
 		<header class="header-top">
-		<select>
-			<option ng-repeat="years in collegeListYear" ng-click="displayProYearwise(years.yearList)">{{years.yearList}}</option>
+		<select ng-change="name()">
+			<option ng-repeat="years in collegeListYear" >{{years.yearList}}</option>
 		</select>
 		</header>
 		<div class="content_cont">
