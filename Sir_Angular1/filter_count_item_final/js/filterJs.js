@@ -25,6 +25,7 @@ app.filter("idFilter1",function(){
 app.filter("yearsFilter",function(){
     return function(ProYear,option){
         var output=[];
+		console.log(output);
         if(option)
         {
             angular.forEach(ProYear,function(value,key){

@@ -3,11 +3,19 @@ app.controller('myCtrl', function($scope){
 	
 	$scope.collegeName = [
 	
-		{"colName":"college Name 1", "type":"college1", "college1_item": 9},
-		{"colName":"college Name 2", "type":"college2", "college1_item": 12},
-		{"colName":"college Name 3", "type":"college3", "college1_item": 15},
-		{"colName":"college Name 4", "type":"college4", "college1_item": 14},
-		{"colName":"college Name 5", "type":"college5", "college1_item": 20}
+		{"colName":"college Name 1", "type":"college1"},
+		{"colName":"college Name 2", "type":"college2"},
+		{"colName":"college Name 3", "type":"college3"},
+		{"colName":"college Name 4", "type":"college4"},
+		{"colName":"college Name 5", "type":"college5"}
+	
+	];
+	$scope.collegeListYear = [
+	
+		{"yearList":"2016"},
+		{"yearList":"2017"},
+		{"yearList":"2018"},
+		{"yearList":"2019"}
 	
 	];
 
@@ -16,7 +24,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college1"
+		"type":"college1",
+		"year":"2016"
 		
 	}
 	,
@@ -25,7 +34,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college1"
+		"type":"college1",
+		"year":"2016"
 		
 	},
 	{
@@ -33,14 +43,16 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college1"
+		"type":"college1",
+		"year":"2016"
 	},	
 	{
 		"name":"college Name 2 Item 1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college2"
+		"type":"college2",
+		"year":"2017"
 		
 	},
 	{
@@ -48,7 +60,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college2"
+		"type":"college2",
+		"year":"2017"
 		
 	},
 	{
@@ -57,7 +70,8 @@ app.controller('myCtrl', function($scope){
 		"type":"college3",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college3"
+		"type":"college3",
+		"year":"2018"
 		
 	},
 	{
@@ -66,7 +80,8 @@ app.controller('myCtrl', function($scope){
 		"type":"college3",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college3"
+		"type":"college3",
+		"year":"2018"
 		
 	},
 	{
@@ -74,7 +89,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college3"
+		"type":"college3",
+		"year":"2016"
 		
 	},
 	{
@@ -82,14 +98,16 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college3"
+		"type":"college3",
+		"year":"2017"
 	},
 	{
 		"name":"college Name 4 Item 1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college4"
+		"type":"college4",
+		"year":"2018"
 		
 	},
 	{
@@ -97,7 +115,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college4"
+		"type":"college4",
+		"year":"2016"
 		
 	},
 	{
@@ -105,7 +124,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college4"
+		"type":"college4",
+		"year":"2017"
 		
 	},
 	{
@@ -113,7 +133,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college4"
+		"type":"college4",
+		"year":"2018"
 		
 	},
 	{
@@ -121,7 +142,8 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college4"
+		"type":"college4",
+		"year":"2018"
 		
 	},
 	{
@@ -129,19 +151,22 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college4"
+		"type":"college4",
+		"year":"2017"
 	},
 	{
 		"name":"college Name 5 Item 1",
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-		"type":"college5"
+		"type":"college5",
+		"year":"2018"
 	}];
 	
 	$scope.allitem = $scope.college.length;
 	
-	$scope.DisplayCity="";
+	$scope.DisplayProList="";
+	$scope.ProYearList="";
 	
 	$scope.getCityCount=function(type){
         var count=0;
@@ -157,12 +182,22 @@ app.controller('myCtrl', function($scope){
 
 	$scope.displayProd=function(type){
 
-        $scope.DisplayCity=type;
+		if(type=="all")
+		{
+			 $scope.DisplayProList="";
+		}
+		else
+        {
+			$scope.DisplayProList=type;
+		}
+		
     }
+	
+	//display product with year wise
+	$scope.displayProYearwise = function(year){
 
-    $scope.displayAllProd=function(type){
-
-        $scope.DisplayCity='';
+		$scope.ProYearList=year;
+		
     }
 	
 	

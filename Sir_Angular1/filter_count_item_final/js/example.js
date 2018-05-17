@@ -18,6 +18,15 @@ app.controller('myCtrl', function($scope){
 		{"yearList":"2019"}
 	
 	];
+	
+	$scope.collegechecklist = [
+	
+		{"colName":"college Checkbox 1", "type":"checkbox1"},
+		{"colName":"college Checkbox 2", "type":"checkbox2"},
+		{"colName":"college Checkbox 3", "type":"checkbox3"}
+	
+	];
+	
 
 	$scope.college = [{ 
 		"name":"college Name 1 Item 1",
@@ -161,6 +170,78 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college5",
 		"year":"2018"
+	},
+	{
+		"name":"college Checkbox 1 Item 1",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox1",
+		"year":"2016"
+	},
+	{
+		"name":"college Checkbox 1 Item 2",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox1",
+		"year":"2017"
+	},
+	{
+		"name":"college Checkbox 2 Item 1",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox2",
+		"year":"2019"
+	},
+	{
+		"name":"college Checkbox 2 Item 2",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox2",
+		"year":"2019"
+	},
+	{
+		"name":"college Checkbox 2 Item 3",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox2",
+		"year":"2019"
+	},
+	{
+		"name":"college Checkbox 2 Item 4",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox2",
+		"year":"2019"
+	},
+	{
+		"name":"college Checkbox 3 Item 1",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox3",
+		"year":"2016"
+	},
+	{
+		"name":"college Checkbox 3 Item 2",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox3",
+		"year":"2016"
+	},
+	{
+		"name":"college Checkbox 3 Item 3",
+		"title":"best school",
+		"adds":"Fkj54524",
+		"cont":"564564564",
+		"type":"checkbox3",
+		"year":"2016"
 	}];
 	
 	$scope.allitem = $scope.college.length;
@@ -195,10 +276,16 @@ app.controller('myCtrl', function($scope){
 	
 	//display product with year wise
 	$scope.displayProYearwise = function(year){
-
+		alert(year);
 		$scope.ProYearList=year;
 		
-    }
+    };
+	
+	$scope.name = function(){
+		
+		alert('hi');
+		
+    };
 	
 	
 
