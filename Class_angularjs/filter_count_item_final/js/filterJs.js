@@ -25,6 +25,8 @@ app.filter("idFilter1",function(){
 app.filter("yearsFilter",function(){
     return function(ProYear,option){
         var output=[];
+		//console.log(ProYear);
+		//console.log(option);
         if(option)
         {
             angular.forEach(ProYear,function(value,key){
@@ -39,6 +41,26 @@ app.filter("yearsFilter",function(){
         {
             return ProYear;
         }
+    }
+});
+
+app.filter("checkboxFilter",function(){
+    return function(input,option){
+        var checkoutput=[];
+        if(option)
+        {
+            angular.forEach(input,function(value,key){
+            if(value.type==option){
+                checkoutput.push(value);
+            }
+            });
+            return checkoutput;
+        }
+        else
+        {
+            return input;
+        }
+		
     }
 });
 

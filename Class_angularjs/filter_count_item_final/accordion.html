@@ -19,7 +19,14 @@
 		<div class="section_1 menu-list">
 			<h3>colleges</h3>			
 			<ul>
-				<li ng-repeat="collegeName in collegeName" ng-click="displayProd(collegeName.type)"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{getCityCount(collegeName.type)}}</span></li>
+				<li ng-repeat="collegeName in collegeName" ng-click="displayProd(collegeName.type)"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{getCollCount(collegeName.type)}}</span></li>
+			</ul>
+			
+			<h3>Colleges With Checkbox</h3>
+			
+			<h5 on-click="removeFil()"> X Removed Filter</h4>
+			<ul>
+				<li ng-repeat="collegecheck in collegechecklist"> <input type="checkbox" ng-click="displayCheProd(collegecheck.type)"> <span class="item--title">{{collegecheck.colName}}</span> <span class="item--coutn">{{getCollCount(collegecheck.type)}}</span></li>
 			</ul>
 			 
 		</div>
@@ -27,12 +34,16 @@
 	</div>
 	<div class="right_side two_thirds-md">
 		<header class="header-top">
-		<select>
-			<option ng-repeat="years in collegeListYear" ng-click="displayProYearwise(years.yearList)">{{years.yearList}}</option>
+		
+	<!-- Error  is Here   solved  --------------------------------->	
+		<select ng-options="years.yearList for years in collegeListYear" ng-model="selectedValue"  ng-change="displayProYearwise()">	
 		</select>
+	<!-- Error is here End                 -------------------->
+	
+		
 		</header>
 		<div class="content_cont">
-			<ul ng-repeat="x in college | idFilter1:DisplayProList | filter:searchitem | yearsFilter:ProYearList">			
+			<ul ng-repeat="x in college | idFilter1:DisplayProList | filter:searchitem | yearsFilter:selectedValue | checkboxFilter:displayChelist">			
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>

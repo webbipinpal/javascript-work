@@ -1,6 +1,7 @@
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope){
 	
+	//college name left side nav name
 	$scope.collegeName = [
 	
 		{"colName":"college Name 1", "type":"college1"},
@@ -10,6 +11,7 @@ app.controller('myCtrl', function($scope){
 		{"colName":"college Name 5", "type":"college5"}
 	
 	];
+	//select option years list
 	$scope.collegeListYear = [
 	
 		{"yearList":"2016"},
@@ -18,7 +20,8 @@ app.controller('myCtrl', function($scope){
 		{"yearList":"2019"}
 	
 	];
-	
+
+	//checkbox left side nav name
 	$scope.collegechecklist = [
 	
 		{"colName":"college Checkbox 1", "type":"checkbox1"},
@@ -125,7 +128,7 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-		"year":"2016"
+		"year":"2019"
 		
 	},
 	{
@@ -152,7 +155,7 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-		"year":"2018"
+		"year":"2019"
 		
 	},
 	{
@@ -201,7 +204,7 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox2",
-		"year":"2019"
+		"year":"2018"
 	},
 	{
 		"name":"college Checkbox 2 Item 3",
@@ -217,7 +220,7 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox2",
-		"year":"2019"
+		"year":"2017"
 	},
 	{
 		"name":"college Checkbox 3 Item 1",
@@ -249,7 +252,8 @@ app.controller('myCtrl', function($scope){
 	$scope.DisplayProList="";
 	$scope.ProYearList="";
 	
-	$scope.getCityCount=function(type){
+	//count college item
+	$scope.getCollCount=function(type){
         var count=0;
         $scope.college.filter(function(x){
             if(x.type==type)
@@ -260,7 +264,19 @@ app.controller('myCtrl', function($scope){
         });
         return count;
     }
-
+// count college with checkbox count
+$scope.getCollCountCheck=function(type){
+        var count=0;
+        $scope.college.filter(function(x){
+            if(x.type==type)
+            {
+               count++;     
+            }
+            
+        });
+        return count;
+    }
+// display on click college list then display related item
 	$scope.displayProd=function(type){
 
 		if(type=="all")
@@ -270,26 +286,41 @@ app.controller('myCtrl', function($scope){
 		else
         {
 			$scope.DisplayProList=type;
-		}
-		
+		}	
     }
 	
 	//display product with year wise
-	$scope.displayProYearwise = function(year){
-		alert(year);
-		$scope.ProYearList=year;
-		
-    };
-	
-	$scope.name = function(){
-		
-		alert('hi');
-		
-    };
-	
-	
+	$scope.selectedValue='';
 
-
+	$scope.displayProYearwise = function(){
+		
+		let total_count=0,i;
+		
+		$scope.selectedValue=$scope.selectedValue.yearList;
+			
+		$scope.allitem = $scope.college.length;
+		for(i=0; i<$scope.allitem; i++)
+		{
+			if($scope.college[i].year==$scope.selectedValue)
+			{
+				total_count++;
+			}
+		}
+		$scope.allitem=total_count;
+	}
+	
+	
+	//display checkbox item
+	$scope.displayChelist= '';
+	$scope.displayCheProd = function(checktype){
+		$scope.displayChelist = checktype;
+	}
+	
+	//remove filter
+	/*$scope.removeFil = function(){
+		displayChelist = '';
+	}*/
+	
 });
 
 
