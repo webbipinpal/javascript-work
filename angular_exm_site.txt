@@ -1,7 +1,11 @@
 http://plnkr.co/edit/HCqcZMlRb20fLymxLrsO?p=preview
 
+https://www.peterbe.com/plog/promises-with-$http
+
+
 Angular js website
 http://www.drivojoy.com/RepairandService/Index#/VehicleInformation
+
 
 exm:
 
