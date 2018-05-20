@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
   <head>
     <script src="js/angular128.js"></script>
     <script src="js/ui-bootstrap-tpls-0-10-0.js"></script>
@@ -9,7 +8,7 @@
 	<script src="js/filterJs.js"></script>
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/grid.css" rel="stylesheet">
-	<meta charset="utf-8"/>
+	
   </head>
   <body ng-app="myApp">
 	<div class="main_cont" ng-controller="myCtrl">
@@ -24,8 +23,10 @@
 			</ul>
 			
 			<h3>Colleges With Checkbox</h3>
+			
+			<h5 on-click="removeFil()"> X Removed Filter</h4>
 			<ul>
-				<li ng-repeat="collegecheck in collegechecklist"> <input type="checkbox" ng-model="collegecheck.status"> <span class="item--title">{{collegecheck.colName}}</span> <span class="item--coutn">{{getCollCount(collegecheck.type)}}</span></li>
+				<li ng-repeat="collegecheck in collegechecklist"> <input type="checkbox" ng-click="displayCheProd(collegecheck.type)"> <span class="item--title">{{collegecheck.colName}}</span> <span class="item--coutn">{{getCollCount(collegecheck.type)}}</span></li>
 			</ul>
 			 
 		</div>
@@ -35,15 +36,14 @@
 		<header class="header-top">
 		
 	<!-- Error  is Here   solved  --------------------------------->	
-		<select ng-options="value as value.yearList for value in collegeListYear" ng-model="Selectyear" ng-change="getTotalList(Selectyear.yearList);">
-            
+		<select ng-options="years.yearList for years in collegeListYear" ng-model="selectedValue"  ng-change="displayProYearwise()">	
 		</select>
-	<!-- Error is here End        -------------------->
-		
+	<!-- Error is here End                 -------------------->
+	
 		
 		</header>
 		<div class="content_cont">
-			<ul ng-repeat="x in college | filterAll:DisplayProList:Selectyear:collegechecklist:this | filter:searchitem">			
+			<ul ng-repeat="x in college | idFilter1:DisplayProList | filter:searchitem | yearsFilter:selectedValue | checkboxFilter:displayChelist">			
 				<li><h1> {{x.name}}</h1></li>
 				<li> {{x.title}}</li>
 				<li> {{x.adds}}</li>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+ <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ </head>
+ <body ng-app='myapp'>
+
+ <div ng-controller="fetchCtrl">
+   <!-- Checkbox-->
+   <input type='checkbox' value='1' ng-model='checkboxEl'><br>
+   <input type='button' ng-click='checkVal()' value='Click'>
+   <br>
+   Result : <span >{{ result }}</span>
+ </div>
+ 
+ <!-- Script -->
+ <script>
+ var fetch = angular.module('myapp', []);
+
+ fetch.controller('fetchCtrl', ['$scope', '$http', function ($scope, $http) {
+ 
+   // Check checkbox checked or not
+   $scope.checkVal = function(){
+     if ($scope.checkboxEl) {
+       $scope.result = "Checkbox checked";
+     } else {
+       $scope.result = "Checkbox Not checked";
+     }
+   }
+ 
+ }]);
+
+ </script>
+ 
+ </body>
+
+</html>

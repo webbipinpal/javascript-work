@@ -1,66 +1,63 @@
+
 //display item with filter
-app.filter("idFilter1",function(){
-    return function(input,option){
-        var output=[];
-        if(option)
-        {
+app.filter("filterAll",function(){
+    return function(input, displayProList, selectedYear, selectCheckBox,scope)
+    {
+      var output=[],allitem,chkListType=[];
+      console.log(displayProList);
+      console.log(selectedYear.yearList);
+      console.log(selectCheckBox);
+	  for(var i=0;i<selectCheckBox.length;i++)
+	  {
+		 if(selectCheckBox[i].status==true)
+		 {
+			chkListType.push(selectCheckBox[i].type);
+		 }
+	  }
+	  console.log(chkListType); 
+    // Year Filter begain 
+        if(selectedYear){
             angular.forEach(input,function(value,key){
-            if(value.type==option)
-            {
+            if(value.year == selectedYear.yearList){
+                console.log(value.year);
                 output.push(value);
             }
             });
-            return output;
-        }
-        else
-        {
-            return input;
+     // Year filter end         
+           
+             //display produch list related to college start here
+                 var CollageOutput=[]
+                 if(displayProList){
+                    angular.forEach(output,function(value,key){
+                    if(value.type == displayProList){
+                        console.log(value.year);
+                        CollageOutput.push(value);
+                    }
+                    });
+					if(chkListType)
+					{
+						angular.forEach(CollageOutput,function(value,key){
+							
+						if(value.chktype == chkListType[]){
+							console.log(value.year);
+							CollageOutput.push(value);
+						}
+						});
+					}
+					else{
+						scope.allitem=output.length;  // Get total Length according to year after filter 
+						return CollageOutput;
+					}					
+                 }
+                
+                else{
+                    scope.allitem=output.length;  // Get total Length according to year after filter 
+                    
+                    return output;
+                } 
+            
+                //display produch list related to college start here
+            
         }
     }
 });
-
-
-// display with years
-
-app.filter("yearsFilter",function(){
-    return function(ProYear,option){
-        var output=[];
-		//console.log(ProYear);
-		//console.log(option);
-        if(option)
-        {
-            angular.forEach(ProYear,function(value,key){
-            if(value.year==option)
-            {
-                output.push(value);
-            }
-            });
-            return output;
-        }
-        else
-        {
-            return ProYear;
-        }
-    }
-});
-
-app.filter("checkboxFilter",function(){
-    return function(input,option){
-        var checkoutput=[];
-        if(option)
-        {
-            angular.forEach(input,function(value,key){
-            if(value.type==option){
-                checkoutput.push(value);
-            }
-            });
-            return checkoutput;
-        }
-        else
-        {
-            return input;
-        }
-		
-    }
-});
-
