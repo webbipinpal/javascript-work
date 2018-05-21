@@ -7,13 +7,11 @@ app.filter("filterAll",function(){
         
  /////////// Pick the check box which one selected begain
       var chkItemList=[];
-	  scope.showFilter = false;
        for(i=0;i<selectCheckBox.length;i++)
         {
                if(selectCheckBox[i].status==true)
                {
                    chkItemList.push(selectCheckBox[i].type);
-				   scope.showFilter = true;
                }
         }
         console.log(chkItemList); // display selecet check box value which need to serach in collage array
@@ -56,7 +54,6 @@ app.filter("filterAll",function(){
                        
                         }); 
                         console.log(FinalOutputList);
-						 scope.allitem=output.length;  // Get total Length according to year after 
                         return FinalOutputList;
                     }
                       //// If There is Apply Collage name filter and check box both  then it apply the Same Filter for check box End

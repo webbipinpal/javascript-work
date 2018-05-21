@@ -22,7 +22,7 @@
 			<ul>
 				<li ng-repeat="collegeName in collegeName" ng-click="displayProd(collegeName.type)"> <span class="item--title">{{collegeName.colName}}</span> <span class="item--coutn">{{getCollCount(collegeName.type)}}</span></li>
 			</ul>
-			
+			<div ng-show="showFilter" class="clear_filter" ng-click="clearFilter();"><h3> X Clear Filter</h3></div>
 			<h3>Colleges With Checkbox</h3>
 			<ul>
 				<li ng-repeat="collegecheck in collegechecklist"> <input type="checkbox" ng-model="collegecheck.status"> <span class="item--title">{{collegecheck.colName}}</span> <span class="item--coutn">{{getCollCount(collegecheck.type)}}</span></li>

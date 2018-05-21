@@ -305,8 +305,6 @@ $scope.getCollCountCheck=function(type){
     }
 // display on click college list then display related item
 
-
-    
 	$scope.displayProd=function(type){
 
 		if(type=="all")
@@ -319,7 +317,14 @@ $scope.getCollCountCheck=function(type){
 		}	
     }
 	
-    
+	//clear filter function
+	 $scope.clearFilter = function(){
+		 //alert($scope.collegechecklist.length);
+		 for(var i = 0; i < $scope.collegechecklist.length; i++){
+			 $scope.collegechecklist[i].status = false;
+			 
+		 }
+	 }
 
 });
 

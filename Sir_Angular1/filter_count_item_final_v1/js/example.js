@@ -37,7 +37,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college1",
-        "chktype":"checkbox1",
 		"year":"2016"
 		
 	}
@@ -48,7 +47,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college1",
-        "chktype":"checkbox3",
 		"year":"2016"
 		
 	},
@@ -58,7 +56,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college1",
-        "chktype":"checkbox2",
 		"year":"2016"
 	},	
 	{
@@ -67,7 +64,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college2",
-        "chktype":"checkbox2",
 		"year":"2017"
 		
 	},
@@ -77,7 +73,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college2",
-        "chktype":"checkbox2",
 		"year":"2017"
 		
 	},
@@ -88,7 +83,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college3",
-        "chktype":"checkbox3",
 		"year":"2018"
 		
 	},
@@ -99,7 +93,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college3",
-        "chktype":"checkbox3",
 		"year":"2018"
 		
 	},
@@ -109,7 +102,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college3",
-        "chktype":"checkbox3",
 		"year":"2016"
 		
 	},
@@ -118,7 +110,6 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-        "chktype":"checkbox3",
 		"type":"college3",
 		"year":"2017"
 	},
@@ -128,7 +119,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-        "chktype":"checkbox4",
 		"year":"2018"
 		
 	},
@@ -138,7 +128,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-        "chktype":"checkbox4",
 		"year":"2019"
 		
 	},
@@ -148,7 +137,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-        "chktype":"checkbox4",
 		"year":"2017"
 		
 	},
@@ -158,7 +146,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-        "chktype":"checkbox4",
 		"year":"2018"
 		
 	},
@@ -168,7 +155,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-        "chktype":"checkbox4",
 		"year":"2019"
 		
 	},
@@ -178,7 +164,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college4",
-        "chktype":"checkbox4",
 		"year":"2017"
 	},
 	{
@@ -187,7 +172,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"college5",
-        "chktype":"checkbox5",
 		"year":"2018"
 	},
 	{
@@ -196,7 +180,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox1",
-        "chktype":"checkbox1",
 		"year":"2016"
 	},
 	{
@@ -205,7 +188,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox1",
-        "chktype":"checkbox1",
 		"year":"2017"
 	},
 	{
@@ -214,7 +196,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox2",
-        "chktype":"checkbox2",
 		"year":"2019"
 	},
 	{
@@ -223,7 +204,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox2",
-        "chktype":"checkbox2",
 		"year":"2018"
 	},
 	{
@@ -231,7 +211,6 @@ app.controller('myCtrl', function($scope){
 		"title":"best school",
 		"adds":"Fkj54524",
 		"cont":"564564564",
-        "chktype":"checkbox2",
 		"type":"checkbox2",
 		"year":"2019"
 	},
@@ -241,7 +220,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox2",
-        "chktype":"checkbox2",
 		"year":"2017"
 	},
 	{
@@ -250,7 +228,6 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox3",
-        "chktype":"checkbox3",
 		"year":"2016"
 	},
 	{
@@ -259,8 +236,7 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox3",
-        "chktype":"checkbox3",
-		"year":"2016"
+		"year":"2017"
 	},
 	{
 		"name":"college Checkbox 3 Item 3",
@@ -268,8 +244,7 @@ app.controller('myCtrl', function($scope){
 		"adds":"Fkj54524",
 		"cont":"564564564",
 		"type":"checkbox3",
-        "chktype":"checkbox3",
-		"year":"2016"
+		"year":"2018"
 	}];
 	
 	$scope.allitem = $scope.college.length;
@@ -305,6 +280,8 @@ $scope.getCollCountCheck=function(type){
     }
 // display on click college list then display related item
 
+
+    
 	$scope.displayProd=function(type){
 
 		if(type=="all")
@@ -317,14 +294,7 @@ $scope.getCollCountCheck=function(type){
 		}	
     }
 	
-	//clear filter function
-	 $scope.clearFilter = function(){
-		 //alert($scope.collegechecklist.length);
-		 for(var i = 0; i < $scope.collegechecklist.length; i++){
-			 $scope.collegechecklist[i].status = false;
-			 
-		 }
-	 }
+    
 
 });
 
