@@ -38,7 +38,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college1",
         "chktype":"checkbox1",
-		"year":"2016"
+		"year":"2016",
+		"postDate":"May 20, 2016"
 		
 	}
 	,
@@ -49,8 +50,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college1",
         "chktype":"checkbox3",
-		"year":"2016"
-		
+		"year":"2016",
+		"postDate":"Jan 15, 2016"
 	},
 	{
 		"name":"college Name 1 Item 3",
@@ -60,6 +61,7 @@ app.controller('myCtrl', function($scope){
 		"type":"college1",
         "chktype":"checkbox2",
 		"year":"2016"
+		
 	},	
 	{
 		"name":"college Name 2 Item 1",
@@ -68,8 +70,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college2",
         "chktype":"checkbox2",
-		"year":"2017"
-		
+		"year":"2017",
+		"postDate":"April 02, 2017"
 	},
 	{
 		"name":"college Name 2 Item 2",
@@ -78,8 +80,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college2",
         "chktype":"checkbox2",
-		"year":"2017"
-		
+		"year":"2017",
+		"postDate":"April 18, 2017"
 	},
 	{
 		"name":"college Name 3 Item 1",
@@ -100,8 +102,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college3",
         "chktype":"checkbox3",
-		"year":"2018"
-		
+		"year":"2018",
+		"postDate":"June 12, 2018"
 	},
 	{
 		"name":"college Name 3 Item 3",
@@ -139,8 +141,8 @@ app.controller('myCtrl', function($scope){
 		"cont":"564564564",
 		"type":"college4",
         "chktype":"checkbox4",
-		"year":"2019"
-		
+		"year":"2019",
+		"postDate":"Sept 25, 2019"
 	},
 	{
 		"name":"college Name 4 Item 3",
