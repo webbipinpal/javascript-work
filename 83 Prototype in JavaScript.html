@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+	var Mobile = function(model_no){
+		this.model = model_no;
+		this.price = 3000;
+	}
+	
+	var samsung = new Mobile('J2');
+	//samsung.color = "White";
+	var nokia  = new Mobile('Nokia 111');
+	Mobile.prototype.color = 'white'
+	console.log(samsung);
+	console.log(nokia);
+	
+</script>
+
+</body>
+</html>
+

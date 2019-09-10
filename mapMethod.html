@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+const signupCat = [
+{
+    value: 'st',
+    label: 'Student',
+  },
+  {
+    value: 'fa',
+    label: 'Faculty',
+  },
+  {
+    value: 'al',
+    label: 'Alumani',
+  },
+  {
+    value: 'wm',
+    label: 'Web Master',
+  }
+]
+
+Amap = signupCat.map( option => {
+	var k = option.label ;
+document.write('<h1>' + k + '</h1>');
+});
+</script>
+
+</body>
+</html>

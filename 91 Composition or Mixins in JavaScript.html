@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//Compostion or Mixin
+	
+	var eating = {
+		eat: function(){
+			return 'I an eat <br />';
+		}
+	};
+	var walking = {
+		walk: function(){
+			return 'I an walk <br />';
+		}
+	}
+	var talking = {
+		talk: function(){
+			return 'I an talk <br />';
+		}
+	}
+	
+	//with class
+	var Human = function(){
+	
+	};
+	
+	var Robot = function(){
+		
+	};
+	Object.assign(Human.prototype, eating, walking, talking);
+	Object.assign(Robot.prototype, walking, talking);
+	// end
+	// man = Object.assign(Human.prototype, eating, walking, talking);
+	var man = new Human();
+	var Bipin = new Human();
+	var Robot = new Robot();
+	//var robot = Object.assign({}, walking, talking);
+	
+	document.write(man.eat());
+	document.write(man.walk());
+	document.write(man.talk());
+
+	document.write(Robot.walk(), Robot.talk());
+	
+	document.write(Bipin.eat());
+</script>
+
+</body>
+</html>
+

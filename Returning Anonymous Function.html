@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+	function dis(a){
+		return function(b){
+			return a + b;
+		}
+	}
+	var bp  = dis(10)
+	document.write( bp(15));
+	
+</script>
+
+</body>
+</html>
+

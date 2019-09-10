@@ -1,0 +1,7 @@
+1. document.write('');
+2. document.alert('');
+
+Arrow Function:
+1. short function
+2. anonymous function
+3. 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//function inheritance
+	function extend(child, parent){
+		child.prototype = Object.create(parent.prototype);
+		child.prototype.constructor = child;
+	}
+	// Super Class
+	var Mobile = function(){
+	
+	}
+	//Prototype Mothod
+	Mobile.prototype.show = function(){ return 'Supper class method';}
+	
+	//Sub Class
+	var Samsung = function(){
+	
+	}
+	
+	//Inheritance
+	
+	extend(Samsung, Mobile);
+	Samsung.prototype.show = function(){ return 'Sub class method'}
+	var sam = new Samsung();
+	document.write(sam.show());
+
+</script>
+
+</body>
+</html>
+

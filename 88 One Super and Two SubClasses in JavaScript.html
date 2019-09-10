@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//function inheritance
+	function extend(child, parent){
+		child.prototype = Object.create(parent.prototype);
+		child.prototype.constructor = child;
+	}
+	// Super Class
+	var Mobile = function(){
+	
+	}
+	//Prototype Mothod
+	Mobile.prototype.getModel = function(){ return this.model;}
+	
+	//Sub Class
+	var Samsung = function(price, model){
+	
+		this.price = price;
+		this.model = model;
+	}
+	//Sub Class
+	var Motog = function(model){
+		this.model = model;
+	}
+	//Inheritance
+	
+	extend(Samsung, Mobile);
+	extend(Motog, Mobile);
+	
+	Samsung.prototype.getPrice = function(){
+	return this.price;}
+	
+	var note4 = new Samsung(5000, 'note4');
+	var E4 = new Motog('E4+');
+	console.log(note4.getPrice());
+	console.log(note4.getModel());
+	console.log(E4.getModel());
+
+</script>
+
+</body>
+</html>
+

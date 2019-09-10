@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+	function mobile(mName, sprice){
+		return {
+			model : mName,
+			price : function(){ return (100 + sprice); }
+		}
+	}
+	var moto = mobile("Moto", 200);
+	var nokia = mobile("101", 250);
+	document.write(nokia.model + " " + nokia.price());
+	
+	
+	
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+	function Mobile(mName, price){
+
+			this.model = mName,
+			this.price = function(){
+				document.write("Model:" + this.model + '<br /> ' + "Price: " + price + 'QR' + "<br /> <br />");
+			}
+	}
+	var moto = new Mobile('E4+', 650);
+	var nokia = new Mobile('2557', 4000);
+	
+	nokia.price();
+	moto.price();
+	
+</script>
+
+</body>
+</html>
+

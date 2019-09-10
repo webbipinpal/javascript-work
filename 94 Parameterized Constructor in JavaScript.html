@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	class Mobile{
+		constructor(mobile_no, color){
+			this.model = mobile_no;
+			this.crl = color;
+		}
+		show(){
+		return( this.model + ' ' + this.crl + ' ' + 'is new model' )
+		}
+	}
+	var mob = new Mobile('Nokia', 'white');
+	var tv = new Mobile('LG', 'Black');
+	
+	document.write(mob.model + ' ' +  mob.crl + '<br />');
+	document.write(tv.model + ' ' +  tv.crl + '<br />');
+	
+	//document.write(mob.show());
+</script>
+
+</body>
+</html>
+
